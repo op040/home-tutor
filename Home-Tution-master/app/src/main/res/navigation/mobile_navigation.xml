@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_dashboard">
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.codebrust.hometutionnepal.ui.dashboard.DashboardFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/navigation_tutors"
+        android:name="com.codebrust.hometutionnepal.ui.tutors.TutorsFragment"
+        android:label="Tutors"
+        tools:layout="@layout/fragment_tutors" />
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.codebrust.hometutionnepal.ui.profile.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/navigation_login"
+        android:name="com.codebrust.hometutionnepal.ui.login.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login"
+        />
+    <fragment
+        android:id="@+id/navigation_forget_password"
+        android:name="com.codebrust.hometutionnepal.ui.forgetpassword.ForgetPasswordFragment"
+        android:label="Reset Password"
+        tools:layout="@layout/fragment_forget_password"
+        />
+    <fragment
+        android:id="@+id/navigation_register"
+        android:name="com.codebrust.hometutionnepal.ui.register.RegisterFragment"
+        android:label="Create New Account"
+        tools:layout="@layout/fragment_register"/>
+    <fragment
+        android:id="@+id/navigation_change_password"
+        android:name="com.codebrust.hometutionnepal.ui.ChangePasswordFragment"
+        android:label="Change Your Password"
+        tools:layout="@layout/fragment_change_password"/>
+</navigation>

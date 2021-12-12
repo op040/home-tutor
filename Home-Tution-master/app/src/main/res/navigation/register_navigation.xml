@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/register_navigation.xml"
+    app:startDestination="@id/register_navigation_account_info">
+
+    <fragment
+        android:id="@+id/register_navigation_account_info"
+        android:name="com.codebrust.hometutionnepal.ui.register_activity.fragments.FragmentAccountInfo"
+        android:label="Account Information"
+        tools:layout="@layout/fragment_account_info">
+        <action
+            android:id="@+id/nav_register_accout_to_basic"
+            app:destination="@id/register_navigation_basic_info" />
+    </fragment>
+    <fragment
+        android:id="@+id/register_navigation_basic_info"
+        android:name="com.codebrust.hometutionnepal.ui.register_activity.fragments.FragmentPersonalInfo"
+        android:label="Your Basic Information"
+        tools:layout="@layout/fragment_personal_info">
+        <action
+            android:id="@+id/nav_register_basic_to_preference"
+            app:destination="@id/register_navigation_teaching_preference" />
+    </fragment>
+    <fragment
+        android:id="@+id/register_navigation_teaching_preference"
+        android:name="com.codebrust.hometutionnepal.ui.register_activity.fragments.FragmentTeachingPreference"
+        android:label="Your Teaching Preference"
+        tools:layout="@layout/fragment_teaching_preference"/>
+</navigation>

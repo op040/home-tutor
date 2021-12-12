@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:id="@+id/details"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btn_previous">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="18dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/txt_register_email"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="20dp"
+                android:text="Select levels you prefer to teach"
+                android:paddingStart="0dp"
+                android:paddingLeft="5dp"
+                android:gravity="center_vertical"
+                android:textSize="16dp" />
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chips_group_levels"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/d_bottom_gray_line">
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/newid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:checkable="true"
+                    android:text="Primary(1-5)"/>
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:checkable="true"
+                    android:text="Lower Secondary(6-8)"/>
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:checkable="true"
+                    android:text="Secondary(9-10)"/>
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:checkable="true"
+                    android:text="Higher Secondary"/>
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:checkable="true"
+                    android:text="Bachelor"/>
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:checkable="true"
+                    android:text="Masters"/>
+            </com.google.android.material.chip.ChipGroup>
+            <TextView
+                android:id="@+id/txt_register_phone"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/dark_gray"
+                android:text="Subjects you prefer to teach"
+                android:paddingStart="0dp"
+                android:paddingLeft="5dp"
+                android:gravity="center_vertical"
+                android:textColorHint="@color/gray"
+                android:textSize="16dp" />
+            <com.google.android.flexbox.FlexboxLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:flexWrap="wrap"
+                app:alignItems="stretch"
+                app:alignContent="space_around"
+                app:showDivider="beginning|middle|end">
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/chip_group_subjects"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:id="@+id/txtsubject_input"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:hint="Enter Subject"
+                        android:background="@color/transparent"
+                        android:imeOptions="actionDone"
+                        app:layout_flexGrow="1"
+                        android:inputType="text"/>
+                </com.google.android.material.chip.ChipGroup>
+            </com.google.android.flexbox.FlexboxLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Teaching Method"
+                    android:textSize="16dp" />
+                <Spinner
+                    android:id="@+id/spinner_teaching_method"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:entries="@array/teachingmethods" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Prefer teaching at"
+                    android:textSize="16dp" />
+                <Spinner
+                    android:id="@+id/spinner_teaching_perference"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:entries="@array/placepreference"
+                    android:layout_marginTop="20dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/btn_previous"
+        android:layout_width="106dp"
+        android:layout_height="46dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_margin="8dp"
+        android:clickable="true"
+        android:background="?android:attr/selectableItemBackground"
+        android:gravity="center">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:src="@drawable/ic_baseline_chevron_left_24"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="12dp"
+            android:textStyle="bold"
+            android:text="Previous"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btn_next"
+        android:layout_width="106dp"
+        android:layout_height="46dp"
+        android:layout_margin="8dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_marginLeft="12dp"
+            android:textStyle="bold"
+            android:background="@color/purple_500"
+            android:textColor="@color/white"
+            android:text="Submit" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

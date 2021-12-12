@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="teachingmethods">
+        <item>Online</item>
+        <item>On Premises</item>
+    </string-array>
+    <string-array name="teachingexperience" >
+        <item>None</item>
+        <item>Less than 1 Year</item>
+        <item>1 Year</item>
+        <item>2 Years</item>
+        <item>3 Years</item>
+        <item>4 Years</item>
+        <item>5 Years</item>
+        <item>More than 5 Years</item>
+
+    </string-array>
+    <string-array name="placepreference">
+        <item>Student\'s Home</item>
+        <item>My own place</item>
+        <item>Either of above</item>
+    </string-array>
+    <string-array name="genders" >
+        <item>Male</item>
+        <item>Female</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="education" >
+        <item>Secondary Level</item>
+        <item>Higher Secondary - Pursuing</item>
+        <item>Higher Secondary - Completed</item>
+        <item>Bachelor\'s Degree - Pursuing</item>
+        <item>Bachelor\'s Degree - Completed</item>
+        <item>Master\'s Degree - Pursuing</item>
+        <item>Master\'s Degree - Completed</item>
+    </string-array>
+</resources>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:id="@+id/details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="18dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/txt_profile_bio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:background="@drawable/d_bottom_gray_line"
+                android:hint="About Yourself"
+                android:inputType="textMultiLine"
+                android:paddingStart="0dp"
+                android:paddingLeft="5dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray"
+                android:textSize="16sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="2"
+                android:text="Gender"
+                android:textSize="16dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"/>
+                <Spinner
+                    android:id="@+id/spinner_gender"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="4"
+                    android:entries="@array/genders"
+                    android:layout_marginTop="20dp" />
+            </LinearLayout>
+            <EditText
+                android:id="@+id/txt_profile_address"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/d_bottom_gray_line"
+                android:hint="Address"
+                android:inputType="text"
+                android:paddingStart="0dp"
+                android:paddingLeft="5dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray"
+                android:textSize="16sp" />
+            <EditText
+                android:id="@+id/txt_register_yearofbirth"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/d_bottom_gray_line"
+                android:hint="Year of Birth"
+                android:inputType="number"
+                android:paddingStart="0dp"
+                android:paddingLeft="5dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray"
+                android:textSize="16sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:text="Education"
+                    android:textSize="16dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_vertical"/>
+                <Spinner
+                    android:id="@+id/spinner_education"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="3"
+                    android:entries="@array/education"
+                    android:layout_marginTop="20dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:text="Your Teaching Experience"
+                    android:textSize="16dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_vertical"/>
+                <Spinner
+                    android:id="@+id/spinner_experience"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="20dp"
+                    android:entries="@array/teachingexperience" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/btn_previous"
+        android:layout_width="106dp"
+        android:layout_height="46dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_margin="8dp"
+        android:clickable="true"
+        android:background="?android:attr/selectableItemBackground"
+        android:gravity="center">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:src="@drawable/ic_baseline_chevron_left_24"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="12dp"
+            android:textStyle="bold"
+            android:text="Previous"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btn_next"
+        android:layout_width="106dp"
+        android:layout_height="46dp"
+        android:layout_margin="8dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:textStyle="bold"
+            android:text="Next" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="12dp"
+            android:src="@drawable/ic_baseline_chevron_right_24" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

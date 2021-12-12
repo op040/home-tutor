@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_fl_id"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:fitsSystemWindows="true"
+    android:focusable="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="18dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/txt_register_fullname"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/d_bottom_gray_line"
+                android:hint="Full Name"
+                android:inputType="textEmailAddress"
+                android:paddingStart="0dp"
+                android:paddingLeft="5dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray"
+                android:textSize="16sp" />
+            <EditText
+                android:id="@+id/txt_register_email"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/d_bottom_gray_line"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:paddingStart="0dp"
+                android:paddingLeft="5dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray"
+                android:textSize="16sp" />
+            <EditText
+                android:id="@+id/txt_register_phone"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/d_bottom_gray_line"
+                android:hint="Phone Number"
+                android:inputType="number"
+                android:paddingStart="0dp"
+                android:paddingLeft="5dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/d_bottom_gray_line">
+
+                <EditText
+                    android:id="@+id/txt_register_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_toStartOf="@+id/hide_layout"
+                    android:background="@color/transparent"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:paddingStart="0dp"
+                    android:paddingLeft="5dp"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray"
+                    android:textSize="16sp" />
+
+                <RelativeLayout
+                    android:layout_width="48dp"
+                    android:id="@+id/hide_layout"
+                    android:layout_centerVertical="true"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true">
+
+                    <ImageView
+                        android:id="@+id/hide_btn"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_centerInParent="true"
+                        android:layout_alignParentEnd="true"
+                        android:paddingEnd="0dp"
+                        android:src="@drawable/ic_hide" />
+                </RelativeLayout>
+            </RelativeLayout>
+            <Button
+                android:id="@+id/btn_register"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/d_round_corner_red__bkg"
+                android:text="Register"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16dp" />
+            <TextView
+                android:id="@+id/link_register_as_teacher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:paddingVertical="12dp"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:textColor="@color/black"
+                android:layout_marginVertical="32dp"
+                android:text="Register as a Tutor"/>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</FrameLayout>
